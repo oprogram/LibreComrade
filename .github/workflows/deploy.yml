@@ -33,4 +33,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/oprogram/librenote:dev
+            ghcr.io/oprogram/librecomrade
