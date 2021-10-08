@@ -49,6 +49,7 @@ client.on('interactionCreate', async interaction => {
 const multipliers = {
 	'891461342400249886': 999,
 	'891464376735916163': 999,
+	'893646954003828757': 999,
 	'891461451833815071': 1.7,
 };
 
@@ -74,7 +75,7 @@ client.on('messageCreate', async message => {
 				await message.delete();
 				await message.channel.send(`<@${message.author.id}>\n**Your message was detected as inappropriate and was moderated.**\n:flag_cn: **Glory to the CCP!**`);
 
-				const logChannel = message.guild.channels.cache.get('895780692770832405');
+				const logChannel = message.guild.channels.cache.get(message.guild.id == '891421040285212682' ? '895780692770832405' : '895872441606357032');
 
 				if (logChannel) {
 					const embed = new MessageEmbed()
